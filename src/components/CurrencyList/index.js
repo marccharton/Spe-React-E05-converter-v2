@@ -1,21 +1,19 @@
 // == Import npm
 import React from 'react';
+import PropTypes from 'prop-types';
+
+// == Import data
 import currencies from '../../data/currencies';
 
 // == Styles imports
 import './styles.scss';
 
 // == Composant
-class CurrencyList extends React.Component {
+const CurrencyList = ({currencyList, handleClick}) => {
 
-  constructor(props) {
-    super(props);
-  }
-
-  render() {
-    const list = this.props.currencyList.map((currency) => {
+    const list = currencyList.map((currency) => {
       return (
-        <li key={currency.name} className="currency-list-item" onClick={this.props.handleClick}>
+        <li key={currency.name} className="currency-list-item" onClick={handleClick}>
           <a href="#">{currency.name}</a>
         </li>
       );
@@ -27,8 +25,15 @@ class CurrencyList extends React.Component {
         <ul>{list}</ul>
       </div>
     );
-  }
-}
+};
+
+CurrencyList.propTypes = {
+  currencyList: PropTypes.arrayOf(PropTypes.shape({
+    name: PropTypes.string.isRequired,
+    rate: PropTypes.number.isRequired,
+  })).isRequired,
+  handleClick: PropTypes.func.isRequired,
+};
 
 // == Export
 export default CurrencyList;

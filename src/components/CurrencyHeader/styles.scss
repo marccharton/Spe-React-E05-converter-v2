@@ -15,4 +15,22 @@
   h1 {
     font-size: 2em;
   }
+
+  &-amount {
+    width: 50px;
+    display: inline;
+    background: $color-primary;
+    border: none;
+    font-family: "spartan" sans-serif;
+    color: $color-white;
+    padding: 7px;
+
+    transition: width $transition-fast;
+
+    &:focus, &:hover {
+      width: 60px;
+      border-bottom: 1px solid $color-white;
+    }
+  }
 } 
+

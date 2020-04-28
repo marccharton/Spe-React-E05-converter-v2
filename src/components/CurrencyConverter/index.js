@@ -16,11 +16,9 @@ import CurrencyFooter from '../CurrencyFooter';
 class CurrencyConverter extends React.Component {
   
   state = {
-    currency: {
-      name: "United Pouet",
-      value: 1.5,
-    },
+    currency: currencies[0],
     currencyList: currencies,
+    currentAmount: 1,
   }
 
   handleChangeCurrency = (event) => {
@@ -34,12 +32,22 @@ class CurrencyConverter extends React.Component {
     });
   }
 
+  setCurrentAmount = (value) => {
+    this.setState({
+      ...this.state,
+      currentAmount: value,
+    })
+  }
+
   render() {
+    
+    const {currencyList, currency, currentAmount} = this.state;
+
     return (
       <div className="currency-converter">
-          <CurrencyHeader />
-          <CurrencyList currencyList={this.state.currencyList} handleClick={this.handleChangeCurrency}/>
-          <CurrencyFooter currency={this.state.currency} />
+          <CurrencyHeader currentAmount={currentAmount} changeCurrentAmount={this.setCurrentAmount}/>
+          <CurrencyList currencyList={currencyList} handleClick={this.handleChangeCurrency}/>
+          <CurrencyFooter value={currentAmount} currency={currency} />
       </div>
     );
   }

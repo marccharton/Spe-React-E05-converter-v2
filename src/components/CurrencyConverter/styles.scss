@@ -9,3 +9,7 @@
 .text-strong {
   font-weight: $strong-weight;
 }
+
+.currency-converter {
+  box-shadow: lighten($color-primary, 20%) 2px 2px 5px;
+}
