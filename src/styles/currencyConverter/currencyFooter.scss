@@ -1,0 +1,18 @@
+.currency-footer {
+  color: #bb5432;
+  background: white;
+
+  padding: 15px;
+  height: 120px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  &-title {
+    font-size: 2em;
+  }
+
+  &-value {
+    font-style: italic;
+  }
+} 

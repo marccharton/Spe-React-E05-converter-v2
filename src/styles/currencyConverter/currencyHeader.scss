@@ -1,0 +1,16 @@
+.currency-header {
+  background: #bb5432;
+  color: white;
+}
+
+.currency-header {
+  padding: 15px;
+  height: 120px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  h1 {
+    font-size: 2em;
+  }
+} 
