@@ -5,10 +5,14 @@ import currencies from '../../../data/currencies';
 // == Composant
 class CurrencyList extends React.Component {
 
+  constructor(props) {
+    super(props);
+  }
+
   render() {
-    const list = currencies.map((currency) => {
+    const list = this.props.currencyList.map((currency) => {
       return (
-        <li key={currency.name} className="currency-list-item">
+        <li key={currency.name} className="currency-list-item" onClick={this.props.handleClick}>
           <a href="#">{currency.name}</a>
         </li>
       );
@@ -21,7 +25,6 @@ class CurrencyList extends React.Component {
       </div>
     );
   }
-  
 }
 
 // == Export
