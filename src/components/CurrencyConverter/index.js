@@ -1,13 +1,16 @@
 // == Import npm
 import React from 'react';
 
+// == Styles imports
+import './styles.scss';
+
 // == Import data
-import currencies from '../../../data/currencies';
+import currencies from '../../data/currencies';
 
 // == Imports Composants
-import CurrencyHeader from './CurrencyHeader';
-import CurrencyList from './CurrencyList';
-import CurrencyFooter from './CurrencyFooter';
+import CurrencyHeader from '../CurrencyHeader';
+import CurrencyList from '../CurrencyList';
+import CurrencyFooter from '../CurrencyFooter';
 
 // == Composant
 class CurrencyConverter extends React.Component {

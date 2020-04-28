@@ -1,6 +1,9 @@
 // == Import npm
 import React from 'react';
-import currencies from '../../../data/currencies';
+import currencies from '../../data/currencies';
+
+// == Styles imports
+import './styles.scss';
 
 // == Composant
 class CurrencyList extends React.Component {
@@ -20,7 +23,7 @@ class CurrencyList extends React.Component {
 
     return (
       <div className="currency-list">
-        <p className="currency-list-title text-big">Currencies</p>
+        <p className="currency-list-title text-strong">Currencies</p>
         <ul>{list}</ul>
       </div>
     );

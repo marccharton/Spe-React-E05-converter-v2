@@ -1,6 +1,8 @@
+@import 'src/styles/vars';
+
 .currency-header {
-  background: #bb5432;
-  color: white;
+  background: $color-primary;
+  color: $color-white;
 }
 
 .currency-header {

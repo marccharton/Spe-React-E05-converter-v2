@@ -2,11 +2,10 @@
 import React from 'react';
 
 // == Import
-import reactLogo from './react-logo.svg';
 import './styles.css';
 
 // == Imports Composants
-import CurrencyConverter from '../Container/CurrencyConverter';
+import CurrencyConverter from '../CurrencyConverter';
 
 // == Composant
 const App = () => {

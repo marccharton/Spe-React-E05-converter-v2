@@ -1,6 +1,8 @@
+@import 'src/styles/vars';
+
 .currency-footer {
-  color: #bb5432;
-  background: white;
+  color: $color-primary;
+  background: $color-white;
 
   padding: 15px;
   height: 120px;
